@@ -32,3 +32,18 @@
 #   Nana: HOW'S SCHOOL GOING?
 #   BYE
 #   Nana: BYE SWEETIE!
+puts 'Nana: HI SWEETIE! GIVE NANA A KISS!'
+bye_num = 0
+while 2 < 3
+  talk = gets.chomp
+  if talk == 'BYE'
+    bye_num = bye_num += 1
+else bye_num = 0
+  end
+  if bye_num >= 3
+    puts 'Nana: BYE SWEETIE!'
+  else
+    puts 'Nana: HOW\'S SCHOOL GOING?'
+  end
+  break if bye_num >= 3
+end

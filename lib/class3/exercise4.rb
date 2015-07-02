@@ -8,3 +8,8 @@
 # divisible by 400 (e.g. 2000).
 #
 # TIP: I expect you to use a loop and a few modulo operations.
+(1900..2000).each do |leap|
+  next if "#{leap}".to_i % 4 != 0
+  next if "#{leap}".to_i % 100 == 0 && "#{leap}".to_i % 400 != 0
+  puts "#{leap}".to_i
+end
