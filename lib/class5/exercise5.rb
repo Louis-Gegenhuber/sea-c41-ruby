@@ -26,15 +26,21 @@
 require 'yaml'
 
 def database
-  '/replace/me'
+  File.absolute_path('database.yml')
+  File.dirname(__FILE__) + '/database.yml'
 end
 
 def load
-  ['replace me']
+  ['Incentivized methodologies',
+   'Seemless innovation',
+   'Corporate synergy',
+   'Scalable globalization',
+   'Monetized assets']
 end
 
 def find(id)
-  id # fix me
+  id -= 1
+  load[id]
 end
 
 input = ARGV[0].to_i
