@@ -55,16 +55,19 @@
 #
 # TIP #3: Let the `rand` method return a number in a range starting at zero.
 # What can you do to the number `rand` returns to make it at least 1930?
-
 puts 'Nana: HI SWEETIE! GIVE NANA A KISS!'
-while 2 < 3
-  talk = gets.chomp
-  if talk == 'bye'
+talk = gets.chomp
+while talk != 'BYE'
+  if talk != talk.upcase && talk != 'BYE'
     puts 'Nana: HUH?! SPEAK UP, SWEETIE!'
-elsif talk != talk.upcase || talk != talk.downcase
+  end
+  if talk == talk.upcase
     year = rand(1930..1950)
     puts 'Nana: NOT SINCE ' + year.to_s + '!'
-    break if talk == talk.upcase
+  end
+  talk = gets.chomp
+  if talk == 'BYE'
+    break
   end
 end
 puts 'Nana: BYE SWEETIE!'

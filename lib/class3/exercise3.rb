@@ -34,16 +34,20 @@
 #   Nana: BYE SWEETIE!
 puts 'Nana: HI SWEETIE! GIVE NANA A KISS!'
 bye_num = 0
-while 2 < 3
+while bye_num < 3
   talk = gets.chomp
   if talk == 'BYE'
-    bye_num = bye_num += 1
-else bye_num = 0
+    bye_num += 1
+    if bye_num < 3
+      puts 'Nana: HOW\'S SCHOOL GOING?'
+    end
+elsif talk != talk.upcase
+    bye_num = 0
+    puts 'Nana: HUH?! SPEAK UP, SWEETIE!'
+else
+  bye_num = 0
+  year = rand(1930..1950)
+  puts 'Nana: NOT SINCE ' + year.to_s + '!'
   end
-  if bye_num >= 3
-    puts 'Nana: BYE SWEETIE!'
-  else
-    puts 'Nana: HOW\'S SCHOOL GOING?'
-  end
-  break if bye_num >= 3
 end
+puts 'Nana: BYE SWEETIE!'
