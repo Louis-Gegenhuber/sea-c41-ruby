@@ -26,16 +26,12 @@
 require 'yaml'
 
 def database
-  File.absolute_path('database.yml')
-  File.dirname(__FILE__) + '/database.yml'
+  File.absolute_path("#{File.dirname(__FILE__)}") + '/database.yml'
 end
 
 def load
-  ['Incentivized methodologies',
-   'Seemless innovation',
-   'Corporate synergy',
-   'Scalable globalization',
-   'Monetized assets']
+  array = File.read database
+  YAML.load array
 end
 
 def find(id)

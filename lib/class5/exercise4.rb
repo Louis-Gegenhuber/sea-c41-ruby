@@ -22,8 +22,7 @@
 require 'yaml'
 
 def database
-  File.absolute_path('database.yml')
-  File.dirname(__FILE__) + '/database.yml'
+  File.absolute_path("#{File.dirname(__FILE__)}") + '/database.yml'
 end
 
 def load
