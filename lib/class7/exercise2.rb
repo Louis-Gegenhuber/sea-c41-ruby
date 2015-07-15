@@ -17,5 +17,8 @@
 
 # rubocop:disable TrivialAccessors
 class OrangeTree
-  # fix me
+  attr_reader :fruit
+  def initialize
+    @fruit = 50
+  end
 end
