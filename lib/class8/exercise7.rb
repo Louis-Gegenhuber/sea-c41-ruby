@@ -22,6 +22,13 @@
 
 class Array
   def each_without_yolo(&block)
-    block # fix me
+    each do |x|
+      if x != 'yolo' && x != 'YOLO'
+        block.call(x)
+      else
+        phrase = 'Life is too short'
+        block.call(phrase)
+      end
+    end
   end
 end
